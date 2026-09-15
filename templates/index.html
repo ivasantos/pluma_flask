@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projeto PLUMA — pesquisa integrada sobre hidroquímica, sistema pelágico e biodiversidade na Bacia da Foz do Rio Amazonas.">
+  <meta name="theme-color" content="#032f52">
+  <title>Projeto PLUMA | Bacia da Foz do Rio Amazonas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/banner.css') }}">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <section class="visual-banner" id="inicio" aria-label="Apresentação visual do Projeto PLUMA">
+    <img src="{{ url_for('static', filename='img/banner-pluma.png') }}" alt="Projeto PLUMA — Amazônia, oceano, vida e conexões. Ciência que revela correntes de vida.">
+  </section>
+
+  <header class="topbar">
+    <a class="nav-brand" href="#inicio" aria-label="Projeto PLUMA — início">PLUMA <span>· Bacia da Foz do Rio Amazonas</span></a>
+    <button class="menu" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav aria-label="Navegação principal">
+      <a href="#projeto">O projeto</a><a href="#eixos">Eixos</a><a href="#campanhas">Campanhas</a><a href="#metodos">Métodos</a><a href="#resultados">Resultados</a><a href="#subprojetos">Subprojetos</a><a href="#instituicoes-executoras">Instituições</a><a href="{{ url_for('contato') }}">Contato</a><a class="lang-switch" href="{{ url_for('index_en') }}">EN</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="intro section" id="projeto">
+      <div class="section-index">01</div>
+      <div class="intro-heading reveal"><p class="eyebrow dark">O projeto</p><h2>Uma leitura integrada de um dos sistemas marinhos mais complexos do planeta.</h2></div>
+      <div class="intro-body reveal"><p>O presente Plano de Trabalho tem como objetivo atender ao projeto da Bacia da Foz do Rio Amazonas, no âmbito da linha de investigação "Sistema Pelágico", que engloba os grupos zooplâncton, ictioplâncton, nêuston e dados pretéritos de desembarque pesqueiro. O sistema pelágico é influenciado por fatores ambientais e climáticos, que tornam a dinâmica do ecossistema ainda mais complexa, impactando diretamente os organismos presentes.</p>
+      <p>A Bacia da Foz do Rio Amazonas é uma das maiores e mais importantes do mundo, destacando-se por sua biodiversidade e dinâmica ecossistêmica, ainda pouco conhecida. Nesse contexto, a disponibilidade de nutrientes, o carbono orgânico e a presença de material particulado em suspensão desempenham um papel fundamental para a produtividade primária e a estrutura das teias tróficas, tornando-se essencial o estudo das comunidades zooplanctônicas e neustônicas, utilizando técnicas e metodologias específicas para alcançar objetivos voltados à caracterização ambiental.</p>
+      <p>Para isso, serão estabelecidos cinco subprojetos distintos, cujos objetivos, justificativas, estratégias amostrais e metodologias de análise de dados e laboratoriais são desenvolvidos por equipes especializadas, seguindo um cronograma de atividades de 48 meses.</p>
+      <p>Os principais objetivos deste plano incluem o desenvolvimento de um banco de dados robusto e eficiente para armazenar, analisar e prever desembarques pesqueiros na Bacia da Foz do Rio Amazonas, utilizando tanto dados históricos quanto recentes. Além disso, busca-se caracterizar as comunidades zooplanctônicas, ictioplanctônicas e neustônicas da região, com ênfase na distribuição horizontal e vertical dessas populações na coluna d'água. Dados de parâmetros abióticos (nutrientes, material particulado em suspensão, carbono e nitrogênio orgânico particulado, carbono orgânico dissolvido) permitem caracterizar o ambiente pelágico.</p>
+      <p>Adicionalmente, serão realizadas análises moleculares por meio de técnicas de DNA Barcode, visando a identificação morfológica dos organismos do zooplâncton, e a caracterização do conteúdo estomacal e quantificação da absorção de carbono pelas larvas de peixes, através do metabarcoding e isótopos estáveis, para estudos de integração ecológica e teia trófica.</p>
+      <p>Os resultados obtidos serão analisados conforme cada linha de pesquisa, gerando produtos que servirão como referência para a região. Além disso, os dados serão avaliados de maneira sistêmica e integrada com os parâmetros abióticos, contribuindo para a compreensão das dinâmicas das comunidades zooplanctônica e neustônica da Bacia da Foz do Rio Amazonas.</p></div>
+    </section>
+
+    <section class="territory section dark-section" aria-labelledby="margem-titulo">
+      <div class="territory-copy reveal"><p class="eyebrow">Contexto regional</p><h2 id="margem-titulo">Margem Equatorial</h2><p>A Margem Equatorial reúne cinco bacias sedimentares ao longo do litoral Norte e Nordeste do Brasil — Foz do Amazonas, Pará-Maranhão, Barreirinhas, Ceará e Potiguar —, uma das fronteiras geológicas e ecológicas mais estratégicas do país. É nesse contexto regional mais amplo que se insere a área de estudo do Projeto PLUMA.</p></div>
+      <div class="territory-image reveal"><img src="{{ url_for('static', filename='img/margem-equatorial.png') }}" alt="Mapa da Margem Equatorial mostrando as bacias sedimentares Foz do Amazonas, Pará-Maranhão, Barreirinhas, Ceará e Potiguar"></div>
+    </section>
+
+    <section class="territory section dark-section" aria-labelledby="territorio-titulo">
+      <div class="territory-copy reveal"><p class="eyebrow">Território científico</p><h2 id="territorio-titulo">Bacia da Foz do Rio Amazonas</h2><p>A descarga fluvial, as macromarés e a Corrente Norte do Brasil formam um mosaico hidrográfico que conecta a zona costeira, a plataforma, o talude e o oceano aberto. Essa conectividade regula nutrientes, carbono, produtividade e dispersão dos organismos pelágicos.</p></div>
+      <div class="territory-image reveal"><img src="{{ url_for('static', filename='img/bacia-foz-amazonas.png') }}" alt="Mapa da Bacia da Foz do Amazonas dentro das Bacias da Margem Equatorial"></div>
+    </section>
+
+    <section class="section axes" id="eixos">
+      <div class="section-index">02</div><div class="section-title reveal"><p class="eyebrow dark">Eixos de investigação</p><h2>Da molécula à dinâmica ecossistêmica.</h2></div>
+      <div class="axis-grid">
+        <article class="axis reveal"><span>01</span><h3>Hidroquímica</h3><p>Nutrientes, MPS, COP, NOP, POP e COD ao longo dos gradientes costa–oceano e superfície–profundidade.</p></article>
+        <article class="axis reveal"><span>02</span><h3>Zooplâncton e nêuston</h3><p>Composição taxonômica, abundância, biomassa, diversidade funcional e migração vertical.</p></article>
+        <article class="axis reveal"><span>03</span><h3>Ictioplâncton</h3><p>Distribuição larval, recrutamento, conteúdo estomacal, teia trófica e absorção de carbono.</p></article>
+        <article class="axis reveal"><span>04</span><h3>Biodiversidade molecular</h3><p>DNA barcode e metabarcoding para biblioteca regional, espécies crípticas e interações tróficas.</p></article>
+        <article class="axis reveal"><span>05</span><h3>Pesca e dados históricos</h3><p>Digitalização, integração e modelagem dos desembarques pesqueiros de 1996 a 2007.</p></article>
+      </div>
+    </section>
+
+    <section class="section campaigns" id="campanhas">
+      <div class="section-index">03</div><div class="section-title reveal"><p class="eyebrow dark">Campanhas oceanográficas</p><h2>Amostragem multiescalar na Margem Equatorial.</h2></div>
+      <div class="campaign-layout">
+        <div class="campaign-copy reveal"><p>As expedições combinam estações sobre a plataforma, o talude e o domínio oceânico. A estratégia permite avaliar a variabilidade horizontal e vertical do sistema pelágico sob diferentes condições hidrográficas e sazonais.</p><div class="status"><i></i><span>Campanhas em andamento</span></div></div>
+        <div class="campaign-list">
+          <div class="campaign-item reveal"><b>01</b><div><strong>Coluna de água</strong><span>Perfis hidrográficos e hidroquímicos</span></div></div>
+          <div class="campaign-item reveal"><b>02</b><div><strong>Superfície</strong><span>Nêuston e interface oceano–atmosfera</span></div></div>
+          <div class="campaign-item reveal"><b>03</b><div><strong>Estratos verticais</strong><span>Zooplâncton em diferentes massas de água</span></div></div>
+          <div class="campaign-item reveal"><b>04</b><div><strong>Integração regional</strong><span>Pluma, plataforma, talude e oceano adjacente</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="methods section" id="metodos">
+      <div class="section-index light">04</div><div class="section-title reveal"><p class="eyebrow">Métodos</p><h2>Observação, identificação e integração de dados.</h2></div>
+      <div class="method-flow reveal">
+        <div><span>01</span><strong>Coleta oceanográfica</strong><small>Redes, perfis e amostras de água</small></div><i>→</i>
+        <div><span>02</span><strong>Processamento</strong><small>Triagem, biomassa e análises químicas</small></div><i>→</i>
+        <div><span>03</span><strong>Identificação</strong><small>Taxonomia, imagem e ferramentas moleculares</small></div><i>→</i>
+        <div><span>04</span><strong>Síntese ecológica</strong><small>Estatística multivariada e modelagem</small></div>
+      </div>
+    </section>
+
+    <section class="section results" id="resultados">
+      <div class="section-index">05</div><div class="section-title reveal"><p class="eyebrow dark">Resultados e legado</p><h2>Conhecimento de referência para a região.</h2></div>
+      <div class="result-grid">
+        <article class="reveal"><div class="result-icon">⌁</div><h3>Atlas da biodiversidade</h3><p>Registros taxonômicos, imagens e distribuição das comunidades pelágicas.</p></article>
+        <article class="reveal"><div class="result-icon">⟲</div><h3>Modelos ecossistêmicos</h3><p>Integração entre variáveis ambientais, teias tróficas e padrões biológicos.</p></article>
+        <article class="reveal"><div class="result-icon">◫</div><h3>Bases de dados</h3><p>Dados oceanográficos e pesqueiros estruturados, padronizados e interoperáveis.</p></article>
+        <article class="reveal"><div class="result-icon">◇</div><h3>Formação científica</h3><p>Capacitação de estudantes e profissionais em métodos oceanográficos contemporâneos.</p></article>
+      </div>
+      <div class="publications reveal"><p>Publicações, relatórios técnicos, banco de imagens e produtos de divulgação serão incorporados nesta área ao longo da execução.</p><span>Conteúdo em atualização</span></div>
+    </section>
+
+    <section class="section axes" id="subprojetos">
+      <div class="section-index">06</div><div class="section-title reveal"><p class="eyebrow dark">Subprojetos</p><h2>Frentes de trabalho que sustentam o PLUMA.</h2></div>
+      <div class="axis-grid">
+        <article class="axis reveal"><span>01</span><h3>Sub1</h3><p>Descrição do subprojeto 1. Substitua por título e detalhes reais quando estiverem definidos.</p></article>
+        <article class="axis reveal"><span>02</span><h3>Sub2</h3><p>Descrição do subprojeto 2. Substitua por título e detalhes reais quando estiverem definidos.</p></article>
+        <article class="axis reveal"><span>03</span><h3>Sub3</h3><p>Descrição do subprojeto 3. Substitua por título e detalhes reais quando estiverem definidos.</p></article>
+        <article class="axis reveal"><span>04</span><h3>Sub4</h3><p>Descrição do subprojeto 4. Substitua por título e detalhes reais quando estiverem definidos.</p></article>
+        <article class="axis reveal"><span>05</span><h3>Sub5</h3><p>Descrição do subprojeto 5. Substitua por título e detalhes reais quando estiverem definidos.</p></article>
+      </div>
+    </section>
+
+    <section class="partners section">
+      <div class="section-index">07</div><div class="section-title reveal"><p class="eyebrow dark">Instituições</p><h2>Cooperação científica e tecnológica.</h2></div>
+      <div class="partner-grid reveal"><div><strong>UFRA</strong><span>Instituição executora</span></div><div><strong>FADESP</strong><span>Instituição convenente</span></div><div><strong>PETROBRAS</strong><span>Investimento em P&amp;D</span></div><div><strong>ISARH</strong><span>Instituição colaboradora</span></div></div>
+    </section>
+
+    <section class="partners section" id="instituicoes-executoras">
+      <div class="section-index">08</div><div class="section-title reveal"><p class="eyebrow dark">Instituições executoras</p><h2>Equipe institucional responsável pela execução.</h2></div>
+      <div class="partner-grid reveal">
+        <div><strong>Instituição 1</strong><span>Substitua por nome e função</span></div>
+        <div><strong>Instituição 2</strong><span>Substitua por nome e função</span></div>
+        <div><strong>Instituição 3</strong><span>Substitua por nome e função</span></div>
+        <div><strong>Instituição 4</strong><span>Substitua por nome e função</span></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="contact-inner reveal"><p class="eyebrow">Contato</p><h2>Ciência para compreender<br>e conservar a Amazônia Azul.</h2><p>Universidade Federal Rural da Amazônia · Belém, Pará</p><a class="button light-button" href="{{ url_for('contato') }}">Ver informações de contato</a><small>O endereço oficial será disponibilizado após confirmação da coordenação.</small></div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="{{ url_for('static', filename='img/logotipo-pluma.png') }}" alt="Projeto PLUMA">
+    <p>Projeto PLUMA · Bacia da Foz do Rio Amazonas</p>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/site.js') }}"></script>
+</body>
+</html>

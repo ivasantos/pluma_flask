@@ -1,0 +1,82 @@
+/* ==========================================================================
+   PROJETO PLUMA — Estilos do banner principal e do topo do menu
+   ========================================================================== */
+
+/* Logotipo/nome no menu de navegação */
+.nav-brand {
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-decoration: none;
+  color: #043b5d;
+  font-size: 1.05rem;
+}
+
+.nav-brand span {
+  font-weight: 600;
+  letter-spacing: .03em;
+  font-size: .72rem;
+  color: #55717f;
+}
+
+/* Banner de imagem no topo da página (altura controlada por max-height) */
+.visual-banner {
+  width: 100%;
+  aspect-ratio: 8 / 3;
+  max-height: 90px;
+  background: #001f3b;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.visual-banner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 75%;
+  margin: 0;
+}
+
+/* Menu fixo no topo, logo abaixo do banner */
+.topbar {
+  position: sticky;
+  top: 0;
+  height: 78px;
+}
+
+/* --- Responsivo: tablets --- */
+@media (max-width: 1050px) {
+  .topbar {
+    height: 78px;
+  }
+
+  .nav-brand span {
+    display: none;
+  }
+
+  .visual-banner {
+    max-height: 80px;
+  }
+}
+
+/* --- Responsivo: celulares --- */
+@media (max-width: 720px) {
+  .nav-brand {
+    font-size: .88rem;
+  }
+
+  .visual-banner {
+    aspect-ratio: 8 / 3;
+    min-height: 0;
+    max-height: 70px;
+  }
+
+  .visual-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 75%;
+    position: static;
+    transform: none;
+  }
+}

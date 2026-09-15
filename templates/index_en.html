@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PLUMA Project — integrated research on hydrochemistry, the pelagic system and biodiversity in the Amazon River Mouth Basin.">
+  <meta name="theme-color" content="#032f52">
+  <title>PLUMA Project | Amazon River Mouth Basin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/banner.css') }}">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Skip to content</a>
+
+  <section class="visual-banner" id="inicio" aria-label="Visual presentation of the PLUMA Project">
+    <img src="{{ url_for('static', filename='img/banner-pluma.png') }}" alt="PLUMA Project — Amazon, ocean, life and connections. Science that reveals currents of life.">
+  </section>
+
+  <header class="topbar">
+    <a class="nav-brand" href="#inicio" aria-label="PLUMA Project — home">PLUMA <span>· Amazon River Mouth Basin</span></a>
+    <button class="menu" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav aria-label="Main navigation">
+      <a href="#projeto">The project</a><a href="#eixos">Research areas</a><a href="#campanhas">Campaigns</a><a href="#metodos">Methods</a><a href="#resultados">Results</a><a href="#subprojetos">Subprojects</a><a href="#instituicoes-executoras">Institutions</a><a href="{{ url_for('contact_en') }}">Contact</a><a class="lang-switch" href="{{ url_for('index') }}">PT</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="intro section" id="projeto">
+      <div class="section-index">01</div>
+      <div class="intro-heading reveal"><p class="eyebrow dark">The project</p><h2>An integrated reading of one of the planet's most complex marine systems.</h2></div>
+      <div class="intro-body reveal"><p>This Work Plan aims to support the Amazon River Mouth Basin project under the "Pelagic System" research line, which covers the zooplankton, ichthyoplankton, neuston and historical fishery landing data groups. The pelagic system is shaped by environmental and climatic factors that make the ecosystem's dynamics even more complex, directly affecting the organisms present.</p>
+      <p>The Amazon River Mouth Basin is one of the largest and most important basins in the world, standing out for its biodiversity and ecosystem dynamics, which remain little understood. In this context, nutrient availability, organic carbon and suspended particulate matter play a fundamental role in primary productivity and food-web structure, making it essential to study zooplankton and neuston communities using specific techniques and methodologies aimed at environmental characterization.</p>
+      <p>To this end, five distinct subprojects will be established, whose objectives, rationale, sampling strategies and data/laboratory analysis methodologies are being developed by specialized teams, following a 48-month activity schedule.</p>
+      <p>The main objectives of this plan include developing a robust and efficient database to store, analyze and forecast fishery landings in the Amazon River Mouth Basin, using both historical and recent data. In addition, the project seeks to characterize the region's zooplankton, ichthyoplankton and neuston communities, with emphasis on the horizontal and vertical distribution of these populations in the water column. Abiotic parameter data (nutrients, suspended particulate matter, particulate organic carbon and nitrogen, dissolved organic carbon) help characterize the pelagic environment.</p>
+      <p>Additionally, molecular analyses will be carried out using DNA Barcode techniques to support morphological identification of zooplankton organisms, along with stomach-content characterization and quantification of carbon absorption by fish larvae through metabarcoding and stable isotopes, for studies of ecological integration and food webs.</p>
+      <p>The results obtained will be analyzed according to each research line, generating products that will serve as a reference for the region. In addition, the data will be assessed systemically and integrated with abiotic parameters, contributing to the understanding of zooplankton and neuston community dynamics in the Amazon River Mouth Basin.</p></div>
+    </section>
+
+    <section class="territory section dark-section" aria-labelledby="margem-titulo">
+      <div class="territory-copy reveal"><p class="eyebrow">Regional context</p><h2 id="margem-titulo">Equatorial Margin</h2><p>The Equatorial Margin brings together five sedimentary basins along Brazil's northern and northeastern coast — Foz do Amazonas, Pará-Maranhão, Barreirinhas, Ceará and Potiguar — one of the country's most strategic geological and ecological frontiers. It is within this broader regional context that the PLUMA Project's study area is located.</p></div>
+      <div class="territory-image reveal"><img src="{{ url_for('static', filename='img/margem-equatorial.png') }}" alt="Map of the Equatorial Margin showing the Foz do Amazonas, Pará-Maranhão, Barreirinhas, Ceará and Potiguar sedimentary basins"></div>
+    </section>
+
+    <section class="territory section dark-section" aria-labelledby="territorio-titulo">
+      <div class="territory-copy reveal"><p class="eyebrow">Scientific territory</p><h2 id="territorio-titulo">Amazon River Mouth Basin</h2><p>River discharge, macrotides and the North Brazil Current form a hydrographic mosaic that connects the coastal zone, the shelf, the slope and the open ocean. This connectivity regulates nutrients, carbon, productivity and the dispersal of pelagic organisms.</p></div>
+      <div class="territory-image reveal"><img src="{{ url_for('static', filename='img/bacia-foz-amazonas.png') }}" alt="Map of the Amazon River Mouth Basin within the Equatorial Margin basins"></div>
+    </section>
+
+    <section class="section axes" id="eixos">
+      <div class="section-index">02</div><div class="section-title reveal"><p class="eyebrow dark">Research areas</p><h2>From molecule to ecosystem dynamics.</h2></div>
+      <div class="axis-grid">
+        <article class="axis reveal"><span>01</span><h3>Hydrochemistry</h3><p>Nutrients, SPM, POC, PON, POP and DOC along coast–ocean and surface–depth gradients.</p></article>
+        <article class="axis reveal"><span>02</span><h3>Zooplankton and neuston</h3><p>Taxonomic composition, abundance, biomass, functional diversity and vertical migration.</p></article>
+        <article class="axis reveal"><span>03</span><h3>Ichthyoplankton</h3><p>Larval distribution, recruitment, stomach content, food web and carbon absorption.</p></article>
+        <article class="axis reveal"><span>04</span><h3>Molecular biodiversity</h3><p>DNA barcoding and metabarcoding for a regional library, cryptic species and trophic interactions.</p></article>
+        <article class="axis reveal"><span>05</span><h3>Fisheries and historical data</h3><p>Digitization, integration and modeling of fishery landings from 1996 to 2007.</p></article>
+      </div>
+    </section>
+
+    <section class="section campaigns" id="campanhas">
+      <div class="section-index">03</div><div class="section-title reveal"><p class="eyebrow dark">Oceanographic campaigns</p><h2>Multiscale sampling across the Equatorial Margin.</h2></div>
+      <div class="campaign-layout">
+        <div class="campaign-copy reveal"><p>The expeditions combine stations across the shelf, the slope and the open-ocean domain. This strategy makes it possible to assess the horizontal and vertical variability of the pelagic system under different hydrographic and seasonal conditions.</p><div class="status"><i></i><span>Ongoing campaigns</span></div></div>
+        <div class="campaign-list">
+          <div class="campaign-item reveal"><b>01</b><div><strong>Water column</strong><span>Hydrographic and hydrochemical profiles</span></div></div>
+          <div class="campaign-item reveal"><b>02</b><div><strong>Surface</strong><span>Neuston and the ocean–atmosphere interface</span></div></div>
+          <div class="campaign-item reveal"><b>03</b><div><strong>Vertical strata</strong><span>Zooplankton across different water masses</span></div></div>
+          <div class="campaign-item reveal"><b>04</b><div><strong>Regional integration</strong><span>Plume, shelf, slope and adjacent ocean</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="methods section" id="metodos">
+      <div class="section-index light">04</div><div class="section-title reveal"><p class="eyebrow">Methods</p><h2>Observation, identification and data integration.</h2></div>
+      <div class="method-flow reveal">
+        <div><span>01</span><strong>Oceanographic collection</strong><small>Nets, profiles and water samples</small></div><i>→</i>
+        <div><span>02</span><strong>Processing</strong><small>Sorting, biomass and chemical analyses</small></div><i>→</i>
+        <div><span>03</span><strong>Identification</strong><small>Taxonomy, imaging and molecular tools</small></div><i>→</i>
+        <div><span>04</span><strong>Ecological synthesis</strong><small>Multivariate statistics and modeling</small></div>
+      </div>
+    </section>
+
+    <section class="section results" id="resultados">
+      <div class="section-index">05</div><div class="section-title reveal"><p class="eyebrow dark">Results and legacy</p><h2>Reference knowledge for the region.</h2></div>
+      <div class="result-grid">
+        <article class="reveal"><div class="result-icon">⌁</div><h3>Biodiversity atlas</h3><p>Taxonomic records, images and distribution of pelagic communities.</p></article>
+        <article class="reveal"><div class="result-icon">⟲</div><h3>Ecosystem models</h3><p>Integration of environmental variables, food webs and biological patterns.</p></article>
+        <article class="reveal"><div class="result-icon">◫</div><h3>Databases</h3><p>Oceanographic and fisheries data, structured, standardized and interoperable.</p></article>
+        <article class="reveal"><div class="result-icon">◇</div><h3>Scientific training</h3><p>Training students and professionals in contemporary oceanographic methods.</p></article>
+      </div>
+      <div class="publications reveal"><p>Publications, technical reports, an image bank and outreach materials will be added to this area throughout the project.</p><span>Content being updated</span></div>
+    </section>
+
+    <section class="section axes" id="subprojetos">
+      <div class="section-index">06</div><div class="section-title reveal"><p class="eyebrow dark">Subprojects</p><h2>Work streams that support PLUMA.</h2></div>
+      <div class="axis-grid">
+        <article class="axis reveal"><span>01</span><h3>Sub1</h3><p>Description of subproject 1. Replace with the actual title and details once defined.</p></article>
+        <article class="axis reveal"><span>02</span><h3>Sub2</h3><p>Description of subproject 2. Replace with the actual title and details once defined.</p></article>
+        <article class="axis reveal"><span>03</span><h3>Sub3</h3><p>Description of subproject 3. Replace with the actual title and details once defined.</p></article>
+        <article class="axis reveal"><span>04</span><h3>Sub4</h3><p>Description of subproject 4. Replace with the actual title and details once defined.</p></article>
+        <article class="axis reveal"><span>05</span><h3>Sub5</h3><p>Description of subproject 5. Replace with the actual title and details once defined.</p></article>
+      </div>
+    </section>
+
+    <section class="partners section">
+      <div class="section-index">07</div><div class="section-title reveal"><p class="eyebrow dark">Institutions</p><h2>Scientific and technological cooperation.</h2></div>
+      <div class="partner-grid reveal"><div><strong>UFRA</strong><span>Executing institution</span></div><div><strong>FADESP</strong><span>Grant-managing institution</span></div><div><strong>PETROBRAS</strong><span>R&amp;D investment</span></div><div><strong>ISARH</strong><span>Partner institution</span></div></div>
+    </section>
+
+    <section class="partners section" id="instituicoes-executoras">
+      <div class="section-index">08</div><div class="section-title reveal"><p class="eyebrow dark">Executing institutions</p><h2>Institutional team responsible for execution.</h2></div>
+      <div class="partner-grid reveal">
+        <div><strong>Institution 1</strong><span>Replace with name and role</span></div>
+        <div><strong>Institution 2</strong><span>Replace with name and role</span></div>
+        <div><strong>Institution 3</strong><span>Replace with name and role</span></div>
+        <div><strong>Institution 4</strong><span>Replace with name and role</span></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="contact-inner reveal"><p class="eyebrow">Contact</p><h2>Science to understand<br>and conserve the Blue Amazon.</h2><p>Federal Rural University of Amazonia · Belém, Pará</p><a class="button light-button" href="{{ url_for('contact_en') }}">View contact information</a><small>Official contact details will be published once confirmed by the coordination team.</small></div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="{{ url_for('static', filename='img/logotipo-pluma.png') }}" alt="PLUMA Project">
+    <p>PLUMA Project · Amazon River Mouth Basin</p>
+    <a href="#inicio">Back to top ↑</a>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/site.js') }}"></script>
+</body>
+</html>

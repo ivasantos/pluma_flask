@@ -1,0 +1,1008 @@
+/* ==========================================================================
+   PROJETO PLUMA — Folha de estilos principal
+   Organizado por seção da página, na mesma ordem em que aparecem no HTML.
+   ========================================================================== */
+
+/* --- Variáveis de cor e reset básico --- */
+:root {
+  --navy: #032f52;
+  --deep: #001d32;
+  --blue: #075c88;
+  --cyan: #11a8c7;
+  --gold: #c99928;
+  --ice: #edf7f9;
+  --ink: #0b2536;
+  --paper: #fff;
+  --line: #cddde3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Manrope, Arial, sans-serif;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+/* --- Acessibilidade: link "pular para o conteúdo" --- */
+.skip {
+  position: fixed;
+  left: 1rem;
+  top: -5rem;
+  background: #fff;
+  padding: .8rem;
+  z-index: 99;
+}
+
+.skip:focus {
+  top: 1rem;
+}
+
+/* ==========================================================================
+   CABEÇALHO / MENU DE NAVEGAÇÃO (.topbar)
+   ========================================================================== */
+
+.topbar {
+  height: 92px;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, .96);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  border-bottom: 1px solid rgba(8, 61, 91, .1);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  height: 68px;
+  width: auto;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.topbar nav a {
+  text-decoration: none;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: #173c51;
+  white-space: nowrap;
+}
+
+.topbar nav a:hover {
+  color: var(--cyan);
+}
+
+/* Seletor de idioma (PT / EN) no menu */
+.lang-switch {
+  margin-left: .3rem;
+  padding: .3rem .6rem;
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  font-size: .68rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+
+.lang-switch:hover {
+  background: var(--cyan);
+  color: #fff;
+}
+
+/* Botão hamburguer (menu mobile) */
+.menu {
+  display: none;
+  border: 0;
+  background: none;
+}
+
+/* ==========================================================================
+   HERO (banner de texto com título e métricas — se usado)
+   ========================================================================== */
+
+.hero {
+  min-height: 760px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, .55fr);
+  align-items: center;
+  gap: 5vw;
+  padding: 130px 7vw 70px;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  background: radial-gradient(circle at 74% 15%, #0c6f9d 0, transparent 30%), linear-gradient(135deg, #00192b 0%, #043c62 54%, #087da1 100%);
+}
+
+.hero-bg,
+.grid {
+  position: absolute;
+  inset: 0;
+}
+
+.grid {
+  opacity: .13;
+  background-image: linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to right, transparent, black);
+}
+
+.plume {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(3px);
+  border: 2px solid rgba(53, 220, 239, .18);
+  transform: rotate(-18deg);
+}
+
+.p1 {
+  width: 65vw;
+  height: 25vw;
+  right: -10vw;
+  bottom: 5vh;
+  box-shadow: 0 0 90px rgba(14, 184, 204, .15) inset;
+}
+
+.p2 {
+  width: 48vw;
+  height: 18vw;
+  right: -5vw;
+  bottom: 16vh;
+  border-color: rgba(255, 255, 255, .15);
+}
+
+.hero-copy,
+.hero-card {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: .18em;
+  font-weight: 800;
+  color: #86e8f2;
+  margin: 0 0 1.2rem;
+}
+
+.eyebrow.dark {
+  color: #087d9a;
+}
+
+.hero h1,
+.section h2,
+.contact h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(3.6rem, 7vw, 7.6rem);
+  line-height: .91;
+  letter-spacing: -.055em;
+  margin: .2rem 0 1.8rem;
+  max-width: 900px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 690px;
+  color: #d4edf2;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 1.35rem;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: .82rem;
+  letter-spacing: .03em;
+  border-radius: 2px;
+}
+
+.primary {
+  background: var(--gold);
+  color: #062b45;
+}
+
+.ghost {
+  border: 1px solid rgba(255, 255, 255, .45);
+}
+
+.hero-card {
+  border-left: 1px solid rgba(255, 255, 255, .35);
+  padding-left: 2.2rem;
+}
+
+.card-kicker {
+  display: block;
+  color: #92d8e2;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  margin-bottom: 1.8rem;
+}
+
+.metric {
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, .16);
+}
+
+.metric strong {
+  display: block;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.metric span {
+  font-size: .78rem;
+  color: #b9d7df;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 28px;
+  left: 7vw;
+  font-size: .68rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #9bcbd5;
+}
+
+.scroll-cue span {
+  display: inline-block;
+  width: 44px;
+  height: 1px;
+  background: #58c3d5;
+  vertical-align: middle;
+  margin-right: .8rem;
+}
+
+/* ==========================================================================
+   ESTRUTURA GERAL DAS SEÇÕES (título grande + número no canto)
+   ========================================================================== */
+
+.section {
+  padding: 110px 7vw;
+  position: relative;
+}
+
+.section-index {
+  position: absolute;
+  right: 7vw;
+  top: 80px;
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: #e8f0f2;
+  letter-spacing: -.08em;
+}
+
+.section-index.light {
+  color: rgba(255, 255, 255, .09);
+}
+
+/* ==========================================================================
+   SEÇÃO "O PROJETO" (.intro)
+   ========================================================================== */
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+}
+
+.intro-heading h2,
+.section-title h2 {
+  font-size: clamp(2.4rem, 4vw, 4.7rem);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+  margin: 0;
+}
+
+.intro-body {
+  padding-top: 3rem;
+}
+
+.intro-body p,
+.territory-copy p,
+.campaign-copy p {
+  font-size: 1.04rem;
+  line-height: 1.85;
+  color: #496574;
+}
+
+/* Fundo escuro reutilizado pelas seções "Margem Equatorial" e "Território científico" */
+.dark-section {
+  background: var(--deep);
+  color: white;
+}
+
+/* ==========================================================================
+   SEÇÕES "MARGEM EQUATORIAL" E "BACIA DA FOZ DO RIO AMAZONAS" (.territory)
+   Layout: texto de um lado + imagem/ilustração do outro
+   ========================================================================== */
+
+.territory {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 6vw;
+  align-items: center;
+  overflow: hidden;
+}
+
+.territory-copy h2 {
+  font-size: clamp(2.6rem, 4vw, 4.8rem);
+  line-height: 1;
+  margin: .2rem 0 1.8rem;
+}
+
+.territory-copy p {
+  color: #b8d4dc;
+}
+
+/* Caixa que recebe as imagens dos mapas (Margem Equatorial / Bacia da Foz) */
+.territory-image {
+  height: 280px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .15);
+}
+
+.territory-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* --- Ilustração CSS do perfil da coluna d'água (usada como alternativa à imagem) --- */
+.transect {
+  height: 430px;
+  position: relative;
+  background: linear-gradient(#0d91b6 0 13%, #075377 13% 46%, #053958 46% 70%, #02233a 70%);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .15);
+}
+
+.sun {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: #efc34f;
+  border-radius: 50%;
+  box-shadow: 0 0 40px #f7d36e;
+}
+
+.waterline {
+  position: absolute;
+  top: 13%;
+  width: 100%;
+  height: 3px;
+  background: #80e6f3;
+}
+
+.seafloor {
+  position: absolute;
+  bottom: -1px;
+  width: 120%;
+  height: 48%;
+  left: -5%;
+  background: #00111f;
+  clip-path: polygon(0 72%, 30% 65%, 48% 50%, 65% 36%, 78% 13%, 100% 0, 100% 100%, 0 100%);
+}
+
+.station {
+  position: absolute;
+  top: 13%;
+  width: 1px;
+  background: rgba(255, 255, 255, .42);
+  z-index: 3;
+}
+
+.station:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background: #e7c24d;
+  border-radius: 50%;
+}
+
+.s1 {
+  left: 17%;
+  height: 45%;
+}
+
+.s2 {
+  left: 39%;
+  height: 54%;
+}
+
+.s3 {
+  left: 62%;
+  height: 65%;
+}
+
+.s4 {
+  left: 84%;
+  height: 78%;
+}
+
+.depth-label {
+  position: absolute;
+  left: 16px;
+  z-index: 4;
+  font-size: .64rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #c1e9ef;
+}
+
+.d0 {
+  top: 17%;
+}
+
+.d1 {
+  top: 42%;
+}
+
+.d2 {
+  top: 63%;
+}
+
+.d3 {
+  top: 84%;
+}
+
+/* ==========================================================================
+   SEÇÃO "EIXOS DE INVESTIGAÇÃO" E "SUBPROJETOS" (.axis-grid — 5 colunas)
+   ========================================================================== */
+
+.section-title {
+  max-width: 900px;
+  margin-bottom: 4.5rem;
+}
+
+.axis-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.axis {
+  padding: 2.2rem 1.4rem 2.5rem;
+  border-right: 1px solid var(--line);
+  min-height: 290px;
+}
+
+.axis:last-child {
+  border-right: 0;
+}
+
+.axis > span,
+.method-flow span {
+  font-size: .68rem;
+  color: #1591a9;
+  font-weight: 800;
+}
+
+.axis h3 {
+  font-size: 1.08rem;
+  margin: 3rem 0 .8rem;
+}
+
+.axis p {
+  font-size: .83rem;
+  line-height: 1.7;
+  color: #607884;
+}
+
+/* ==========================================================================
+   SEÇÃO "CAMPANHAS OCEANOGRÁFICAS" (.campaigns)
+   ========================================================================== */
+
+.campaigns {
+  background: #eff7f8;
+}
+
+.campaign-layout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 8vw;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 2rem;
+  font-size: .78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.status i {
+  width: 10px;
+  height: 10px;
+  background: #15a68c;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(21, 166, 140, .13);
+}
+
+.campaign-item {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid #cbdde1;
+}
+
+.campaign-item b {
+  color: #0791ad;
+  font-size: .68rem;
+}
+
+.campaign-item strong,
+.campaign-item span {
+  display: block;
+}
+
+.campaign-item strong {
+  font-size: 1rem;
+}
+
+.campaign-item span {
+  font-size: .8rem;
+  color: #67818d;
+  margin-top: .3rem;
+}
+
+/* ==========================================================================
+   SEÇÃO "MÉTODOS" (.methods — fluxo de 4 etapas)
+   ========================================================================== */
+
+.methods {
+  background: linear-gradient(125deg, #073d60, #006986);
+  color: white;
+}
+
+.method-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.method-flow div {
+  border-top: 2px solid #36bdd0;
+  padding-top: 1.4rem;
+  min-height: 150px;
+}
+
+.method-flow strong,
+.method-flow small {
+  display: block;
+}
+
+.method-flow strong {
+  margin: 1.6rem 0 .5rem;
+}
+
+.method-flow small {
+  color: #b9dce3;
+  line-height: 1.5;
+}
+
+.method-flow i {
+  font-style: normal;
+  color: #66d2df;
+}
+
+/* ==========================================================================
+   SEÇÃO "RESULTADOS E LEGADO" (.result-grid — 4 colunas)
+   ========================================================================== */
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.result-grid article {
+  padding: 2rem;
+  border: 1px solid var(--line);
+  min-height: 250px;
+}
+
+.result-icon {
+  font-size: 2.2rem;
+  color: #068fac;
+}
+
+.result-grid h3 {
+  margin: 2.8rem 0 .7rem;
+  font-size: 1.05rem;
+}
+
+.result-grid p {
+  font-size: .83rem;
+  line-height: 1.65;
+  color: #637b86;
+}
+
+.publications {
+  margin-top: 1.2rem;
+  background: var(--ice);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.publications p {
+  font-size: .85rem;
+}
+
+.publications span {
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .66rem;
+  font-weight: 800;
+  color: #138aa2;
+}
+
+/* ==========================================================================
+   SEÇÕES "INSTITUIÇÕES" E "INSTITUIÇÕES EXECUTORAS" (.partner-grid — 4 colunas)
+   ========================================================================== */
+
+.partners {
+  background: #f7fafb;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line);
+}
+
+.partner-grid div {
+  padding: 2.1rem;
+  border-right: 1px solid var(--line);
+}
+
+.partner-grid div:last-child {
+  border-right: 0;
+}
+
+.partner-grid strong,
+.partner-grid span {
+  display: block;
+}
+
+.partner-grid strong {
+  font-size: 1.25rem;
+  color: #064c74;
+}
+
+.partner-grid span {
+  font-size: .72rem;
+  color: #6d818a;
+  margin-top: .4rem;
+}
+
+/* ==========================================================================
+   SEÇÃO "CONTATO" (.contact)
+   ========================================================================== */
+
+.contact {
+  padding: 110px 7vw;
+  background: linear-gradient(120deg, #001d32, #075e80);
+  color: white;
+  text-align: center;
+}
+
+.contact-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.contact h2 {
+  font-size: clamp(3rem, 5vw, 5.7rem);
+  line-height: .96;
+  letter-spacing: -.05em;
+  margin: .3rem 0 1.5rem;
+}
+
+.contact p {
+  color: #b8dbe2;
+}
+
+.light-button {
+  background: white;
+  color: #074767;
+  margin-top: 1.3rem;
+}
+
+.contact small {
+  display: block;
+  margin-top: 1.2rem;
+  color: #9cc6cf;
+  font-size: .68rem;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+
+footer {
+  padding: 2rem 5vw;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-top: 1px solid #dce8eb;
+}
+
+footer img {
+  width: 130px;
+  height: auto;
+}
+
+footer p {
+  font-size: .74rem;
+  color: #617985;
+  flex: 1;
+}
+
+footer a {
+  font-size: .72rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   ANIMAÇÃO DE ENTRADA (elementos com a classe .reveal aparecem ao rolar a página)
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================================================
+   RESPONSIVO — TABLETS (telas até 1050px)
+   ========================================================================== */
+
+@media (max-width: 1280px) {
+  .topbar nav {
+    display: none;
+    position: absolute;
+    top: 92px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1.5rem 5vw;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 14px 30px rgba(0, 30, 50, .12);
+  }
+
+  .topbar nav.open {
+    display: flex;
+  }
+
+  .menu {
+    display: grid;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .menu span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #073d60;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 850px;
+  }
+
+  .hero-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .card-kicker {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  .axis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .axis {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .result-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVO — CELULARES (telas até 720px)
+   ========================================================================== */
+
+@media (max-width: 720px) {
+  .topbar {
+    height: 78px;
+  }
+
+  .brand,
+  .brand img {
+    height: 59px;
+  }
+
+  .topbar nav {
+    top: 78px;
+  }
+
+  .hero {
+    padding: 120px 6vw 70px;
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 3.7rem;
+  }
+
+  .hero-card {
+    margin-top: 4rem;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section {
+    padding: 78px 6vw;
+  }
+
+  .section-index {
+    font-size: 3.6rem;
+    top: 55px;
+  }
+
+  .intro,
+  .territory,
+  .campaign-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-body {
+    padding-top: 0;
+  }
+
+  .transect {
+    height: 360px;
+  }
+
+  .territory-image {
+    height: 220px;
+  }
+
+  .axis-grid,
+  .result-grid,
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .axis,
+  .partner-grid div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    min-height: auto;
+  }
+
+  .method-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .method-flow i {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+
+  .publications {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-card .metric {
+    padding: .8rem 0;
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .4rem;
+  }
+
+  .contact h2 {
+    font-size: 3rem;
+  }
+}
+
+/* ==========================================================================
+   ACESSIBILIDADE — desativa animações para quem pediu "reduzir movimento"
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
